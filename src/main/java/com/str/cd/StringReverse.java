@@ -1,4 +1,4 @@
-package com.str.cd.reverse;
+package com.str.cd;
 
 public class StringReverse {
 
