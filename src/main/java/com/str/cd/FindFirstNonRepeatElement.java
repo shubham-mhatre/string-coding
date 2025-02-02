@@ -1,6 +1,6 @@
 package com.str.cd;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -16,6 +16,7 @@ public class FindFirstNonRepeatElement {
 	}
 
 	/**
+	 * using LinkedHashMap to maintain insertion order correctly
 	 * iterate on each element
 	 * check if key already present in map.
 	 * if key is present then get value against that key & increment it by 1
@@ -27,7 +28,7 @@ public class FindFirstNonRepeatElement {
 	private static void usingCollectionMap(String input) {
 		System.out.println("approach-2 : with using collection : MAP");
 		
-		Map<Character,Integer> charOccurrenceMap=new HashMap<>();
+		Map<Character,Integer> charOccurrenceMap=new LinkedHashMap<>();
 		for(int i=0;i<input.length();i++) {
 			
 			if(charOccurrenceMap.containsKey(input.charAt(i))) {
