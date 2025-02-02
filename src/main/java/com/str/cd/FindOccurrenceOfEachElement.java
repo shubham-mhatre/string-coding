@@ -1,6 +1,6 @@
 package com.str.cd;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class FindOccurrenceOfEachElement {
@@ -21,7 +21,7 @@ public class FindOccurrenceOfEachElement {
 	 * if key is not present in map then add key and value default count as 1
 	 */
 	private static void usingMap(String input) {
-		Map<Character,Integer>occurrenceMap=new HashMap<>();
+		Map<Character,Integer>occurrenceMap=new LinkedHashMap<>();
 		char[] charArr=input.toCharArray();
 		for(int i=0;i<charArr.length;i++) {			
 			if(occurrenceMap.containsKey(charArr[i])) {
